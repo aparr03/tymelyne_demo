@@ -55,6 +55,119 @@
   color: white;
 }
 
+/* Disclaimer Modal Styles */
+.disclaimer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 20px;
+}
+
+.disclaimer-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: disclaimerFadeIn 0.3s ease-out;
+}
+
+@keyframes disclaimerFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.disclaimer-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+.disclaimer-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.disclaimer-body {
+  padding: 30px;
+  line-height: 1.6;
+}
+
+.disclaimer-body p {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.disclaimer-body p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.disclaimer-body strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.disclaimer-body ul {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.disclaimer-body li {
+  padding: 8px 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.disclaimer-footer {
+  padding: 0 30px 30px;
+  text-align: center;
+}
+
+.acknowledge-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.acknowledge-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.acknowledge-btn:active {
+  transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .section {
@@ -72,6 +185,37 @@
   .container {
     padding: 0 15px;
   }
+  
+  .disclaimer-content {
+    margin: 10px;
+    max-width: none;
+  }
+  
+  .disclaimer-header {
+    padding: 20px 25px;
+  }
+  
+  .disclaimer-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .disclaimer-body {
+    padding: 25px 20px;
+  }
+  
+  .disclaimer-body p,
+  .disclaimer-body li {
+    font-size: 0.95rem;
+  }
+  
+  .disclaimer-footer {
+    padding: 0 20px 25px;
+  }
+  
+  .acknowledge-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -81,5 +225,21 @@
   
   .section-title {
     font-size: 1.8rem;
+  }
+  
+  .disclaimer-overlay {
+    padding: 10px;
+  }
+  
+  .disclaimer-header {
+    padding: 15px 20px;
+  }
+  
+  .disclaimer-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .disclaimer-body {
+    padding: 20px 15px;
   }
 } 

@@ -1,9 +1,37 @@
 services:
-  tymelyne-demo:
-    build: .
+  # Development service with hot reloading
+  tymelyne-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
-      - "3000:80"
-    container_name: tymelyne-demo
+      - "3000:3000"
+    container_name: tymelyne-dev
+    volumes:
+      - ./src:/app/src:delegated
+      - ./public:/app/public:delegated
+      - ./package.json:/app/package.json:ro
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - WDS_SOCKET_HOST=localhost
+      - WDS_SOCKET_PORT=3000
+      - FAST_REFRESH=true
+    stdin_open: true
+    tty: true
+    networks:
+      - tymelyne-network
+
+  # Production service
+  tymelyne-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    container_name: tymelyne-prod
     restart: unless-stopped
     environment:
       - NODE_ENV=production
@@ -13,17 +41,9 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-
-  # Development service (optional)
-  tymelyne-dev:
-    build: .
-    ports:
-      - "3001:80"
-    container_name: tymelyne-dev
-    volumes:
-      - ./src:/app/src
-      - ./public:/app/public
-    environment:
-      - NODE_ENV=development
     profiles:
-      - dev 
+      - prod
+
+networks:
+  tymelyne-network:
+    driver: bridge 

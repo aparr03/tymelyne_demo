@@ -27,7 +27,6 @@ const Header = () => {
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
               <li><button onClick={() => scrollToSection('features')}>Features</button></li>
-              <li><button onClick={() => scrollToSection('screenshots')}>Screenshots</button></li>
               <li><button onClick={() => scrollToSection('demo')}>Demo</button></li>
               <li><button onClick={() => scrollToSection('download')}>Download</button></li>
             </ul>
