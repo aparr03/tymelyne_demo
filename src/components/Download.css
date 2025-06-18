@@ -1,0 +1,202 @@
+.download {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.download .section-title,
+.download .section-subtitle {
+  color: white;
+}
+
+.download-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.download-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.download-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.download-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.download-btn {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  padding: 20px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-icon {
+  font-size: 2rem;
+}
+
+.btn-text {
+  text-align: left;
+}
+
+.btn-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.btn-platform {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.download-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.feature-highlight:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.feature-highlight h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.feature-highlight p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .download-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .download-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .download-info p {
+    font-size: 1rem;
+  }
+  
+  .download-stats {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .download-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-highlight {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .download-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .btn-text {
+    text-align: center;
+  }
+  
+  .highlight-icon {
+    font-size: 2rem;
+  }
+  
+  .feature-highlight h4 {
+    font-size: 1.2rem;
+  }
+} 
