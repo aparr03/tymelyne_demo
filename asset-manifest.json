@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tymelyne_demo/static/css/main.797d2c3f.css",
+    "main.js": "/tymelyne_demo/static/js/main.5cee097c.js",
+    "index.html": "/tymelyne_demo/index.html",
+    "main.797d2c3f.css.map": "/tymelyne_demo/static/css/main.797d2c3f.css.map",
+    "main.5cee097c.js.map": "/tymelyne_demo/static/js/main.5cee097c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.797d2c3f.css",
+    "static/js/main.5cee097c.js"
+  ]
+}
