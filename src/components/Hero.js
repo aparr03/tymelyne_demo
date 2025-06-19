@@ -15,11 +15,11 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Master Your Time with
+              Master Your Learning with
               <span className="gradient-text"> TymeLyne</span>
             </h1>
             <p className="hero-subtitle">
-              The ultimate time management app that helps you organize, track, and optimize your daily activities. 
+              The ultimate learning app driven by AI allowing you to learn about any topic in the world!
               Available for iOS and Android devices.
             </p>
             <div className="hero-buttons">
