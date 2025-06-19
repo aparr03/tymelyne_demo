@@ -39,7 +39,7 @@ const VideoDemo = () => {
                   <p>Click to play the TymeLyne app demonstration</p>
                 </div>
                 <img 
-                  src="/demo_images/TymeLyne_thumbnail.png" 
+                  src={`${process.env.PUBLIC_URL}/demo_images/TymeLyne_thumbnail.png`}
                   alt="Video thumbnail"
                   className="video-thumbnail"
                 />
@@ -55,7 +55,7 @@ const VideoDemo = () => {
                       <p>Please convert the video to .MP4 format for better compatibility.</p>
                       <button 
                         className="retry-btn" 
-                        onClick={() => window.open('/video/TymeLyne_Demo.mp4', '_blank')}
+                        onClick={() => window.open(`${process.env.PUBLIC_URL}/video/TymeLyne_Demo.mp4`, '_blank')}
                       >
                         Download Video
                       </button>
@@ -73,7 +73,7 @@ const VideoDemo = () => {
                     onLoadedData={handleVideoLoad}
                     onLoadStart={() => console.log('Video loading started')}
                   >
-                    <source src="/video/TymeLyne_Demo.mp4" type="video/mp4" />
+                    <source src={`${process.env.PUBLIC_URL}/video/TymeLyne_Demo.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 )}

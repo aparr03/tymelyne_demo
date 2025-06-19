@@ -10,25 +10,25 @@ const Demo = () => {
       id: 1,
       title: 'Home Screen',
       description: 'Welcome to TymeLyne - Your personal time management dashboard.',
-      image: '/demo_images/tyme_home.PNG'
+      image: `${process.env.PUBLIC_URL}/demo_images/tyme_home.PNG`
     },
     {
       id: 2,
       title: 'Login Screen',
       description: 'Secure and easy login to access your personalized time management experience.',
-      image: '/demo_images/tyme_login.PNG'
+      image: `${process.env.PUBLIC_URL}/demo_images/tyme_login.PNG`
     },
     {
       id: 3,
       title: 'Course Description',
       description: 'Track your learning progress and course management features.',
-      image: '/demo_images/tyme_course_desc.PNG'
+      image: `${process.env.PUBLIC_URL}/demo_images/tyme_course_desc.PNG`
     },
     {
       id: 4,
       title: 'Section Description',
       description: 'Detailed view of your organized sections and time blocks.',
-      image: '/demo_images/tyme_section_desc.PNG'
+      image: `${process.env.PUBLIC_URL}/demo_images/tyme_section_desc.PNG`
     }
   ];
 

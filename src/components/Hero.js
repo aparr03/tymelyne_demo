@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="hero-image">
             <div className="phone-frame">
               <img 
-                src="/demo_images/tyme_home.PNG" 
+                src={`${process.env.PUBLIC_URL}/demo_images/tyme_home.PNG`}
                 alt="TymeLyne App Screenshot" 
                 className="phone-screen-image"
               />
