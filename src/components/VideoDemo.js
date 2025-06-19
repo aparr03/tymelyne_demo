@@ -3,9 +3,20 @@ import './VideoDemo.css';
 
 const VideoDemo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   const handlePlayVideo = () => {
     setIsPlaying(true);
+  };
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    console.error('Video failed to load. This may be due to browser compatibility with .mov files.');
+  };
+
+  const handleVideoLoad = () => {
+    setVideoError(false);
+    console.log('Video loaded successfully');
   };
 
   return (
@@ -13,7 +24,7 @@ const VideoDemo = () => {
       <div className="container">
         <h2 className="section-title">See TymeLyne in Action</h2>
         <p className="section-subtitle">
-          Watch how TymeLyne transforms your daily time management experience
+          Watch how TymeLyne revolutionizes your learning experience
         </p>
         
         <div className="video-container">
@@ -28,46 +39,67 @@ const VideoDemo = () => {
                   <p>Click to play the TymeLyne app demonstration</p>
                 </div>
                 <img 
-                  src="https://via.placeholder.com/800x450/667eea/ffffff?text=Video+Thumbnail" 
+                  src="/demo_images/TymeLyne_thumbnail.png" 
                   alt="Video thumbnail"
                   className="video-thumbnail"
                 />
               </div>
             ) : (
               <div className="video-frame">
-                <iframe
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                  title="TymeLyne Demo Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                {videoError ? (
+                  <div className="video-error">
+                    <div className="error-content">
+                      <h3>Video Unavailable</h3>
+                      <p>The demo video cannot be played in this browser.</p>
+                      <p><strong>Note:</strong> .MOV files have limited web browser support.</p>
+                      <p>Please convert the video to .MP4 format for better compatibility.</p>
+                      <button 
+                        className="retry-btn" 
+                        onClick={() => window.open('/video/TymeLyne_Demo.mp4', '_blank')}
+                      >
+                        Download Video
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <video
+                    controls
+                    autoPlay
+                    muted
+                    width="100%"
+                    height="100%"
+                    style={{ borderRadius: '15px' }}
+                    onError={handleVideoError}
+                    onLoadedData={handleVideoLoad}
+                    onLoadStart={() => console.log('Video loading started')}
+                  >
+                    <source src="/video/TymeLyne_Demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
               </div>
             )}
           </div>
           
           <div className="video-features">
             <div className="feature-item">
-              <div className="feature-icon">🎯</div>
               <div className="feature-content">
-                <h4>Smart Task Management</h4>
-                <p>See how easy it is to create and organize your daily tasks</p>
+                <h4>Level Up Your Learning</h4>
+                <p>Earn experience and level up to compete with your friends!</p>
               </div>
             </div>
             
             <div className="feature-item">
-              <div className="feature-icon">📊</div>
               <div className="feature-content">
-                <h4>Real-time Analytics</h4>
-                <p>Discover insights about your productivity patterns</p>
+                <h4>Track Your Progress</h4>
+                <p>View your current and completed courses, along with tracking your daily/weekly/monthly use!</p>
               </div>
             </div>
             
             <div className="feature-item">
-              <div className="feature-icon">⏰</div>
               <div className="feature-content">
                 <h4>Intuitive Scheduling</h4>
-                <p>Learn how to efficiently plan your day with smart suggestions</p>
+                <p>Learn how to efficiently plan your day with smart suggestions!</p>
               </div>
             </div>
           </div>

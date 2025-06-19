@@ -32,32 +32,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-image">
-            <div className="phone-mockup">
-              <div className="phone-screen">
-                <div className="app-preview">
-                  <div className="app-header">
-                    <div className="time-display">9:41</div>
-                    <div className="app-title">TymeLyne</div>
-                  </div>
-                  <div className="app-content">
-                    <div className="task-item">
-                      <div className="task-checkbox"></div>
-                      <div className="task-text">Morning Routine</div>
-                      <div className="task-time">8:00 AM</div>
-                    </div>
-                    <div className="task-item">
-                      <div className="task-checkbox checked"></div>
-                      <div className="task-text">Team Meeting</div>
-                      <div className="task-time">10:00 AM</div>
-                    </div>
-                    <div className="task-item">
-                      <div className="task-checkbox"></div>
-                      <div className="task-text">Lunch Break</div>
-                      <div className="task-time">12:30 PM</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="phone-frame">
+              <img 
+                src="/demo_images/tyme_home.PNG" 
+                alt="TymeLyne App Screenshot" 
+                className="phone-screen-image"
+              />
             </div>
           </div>
         </div>

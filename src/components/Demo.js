@@ -20,15 +20,15 @@ const Demo = () => {
     },
     {
       id: 3,
-      title: 'Section Description',
-      description: 'Detailed view of your organized sections and time blocks.',
-      image: '/demo_images/tyme_section_desc.PNG'
-    },
-    {
-      id: 4,
       title: 'Course Description',
       description: 'Track your learning progress and course management features.',
       image: '/demo_images/tyme_course_desc.PNG'
+    },
+    {
+      id: 4,
+      title: 'Section Description',
+      description: 'Detailed view of your organized sections and time blocks.',
+      image: '/demo_images/tyme_section_desc.PNG'
     }
   ];
 

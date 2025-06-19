@@ -5,8 +5,8 @@ const Features = () => {
   const features = [
     {
       icon: '⏰',
-      title: 'Smart Scheduling',
-      description: 'Intelligent time blocking and scheduling that adapts to your productivity patterns.'
+      title: 'Tailored Learning Courses',
+      description: 'Using the power of AI, TymeLyne allows you to create a personalized learning path about any topic in the world!'
     },
     {
       icon: '📊',
