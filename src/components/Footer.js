@@ -57,8 +57,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="footer-info">
-            <p>&copy; 2024 TymeLyne. All rights reserved.</p>
-            <p>Made with ❤️ for better time management</p>
+            <p>&copy; 2025 <a href="https://marcdejesusdev.com">Marc De Jesus</a> and <a href="https://parrportfolio.vercel.app">Andrew Parr</a>. All rights reserved.</p>
           </div>
           <button className="back-to-top" onClick={scrollToTop}>
             ↑ Back to Top
