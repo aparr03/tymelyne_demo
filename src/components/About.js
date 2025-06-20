@@ -20,12 +20,12 @@ const About = () => {
             <div className="about-text">
               <h2>Our Mission</h2>
               <p>
-                TymeLyne was created with a simple yet powerful vision: to make time management 
-                personal, intelligent, and effortless. We believe that everyone deserves tools 
+                TymeLyne was created with a simple yet powerful vision: to make learning 
+                personal, intelligent, and engaging. We believe that everyone deserves tools 
                 that adapt to their unique lifestyle and learning preferences.
               </p>
               <p>
-                Our AI-powered approach to time management goes beyond traditional scheduling 
+                Our AI-powered approach to learning goes beyond traditional scheduling 
                 apps. We're building a platform that understands your goals, learns from your 
                 habits, and helps you create meaningful progress in all areas of your life.
               </p>
@@ -45,7 +45,7 @@ const About = () => {
                   <h3>Andrew Parr</h3>
                   <p>Co-Founder & Developer</p>
                   <a href="https://parrportfolio.vercel.app" target="_blank" rel="noopener noreferrer">
-                    Portfolio
+                    parrportfolio.vercel.app
                   </a>
                 </div>
               </div>
