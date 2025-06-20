@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Demo.css';
+import '../styling/Demo.css';
 
 const Demo = () => {
   const [activeImage, setActiveImage] = useState(0);

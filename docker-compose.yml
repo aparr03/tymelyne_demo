@@ -3,7 +3,8 @@ services:
   tymelyne-dev:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
+      target: development
     ports:
       - "3000:3000"
     container_name: tymelyne-dev
@@ -29,6 +30,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: production
     ports:
       - "3001:80"
     container_name: tymelyne-prod

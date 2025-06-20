@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './VideoDemo.css';
+import '../styling/VideoDemo.css';
 
 const VideoDemo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,7 +20,7 @@ const VideoDemo = () => {
   };
 
   return (
-    <section id="demo" className="section video-demo">
+    <section id="video-demo" className="section video-demo">
       <div className="container">
         <h2 className="section-title">See TymeLyne in Action</h2>
         <p className="section-subtitle">

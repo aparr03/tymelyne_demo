@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import '../styling/Hero.css';
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -26,7 +26,7 @@ const Hero = () => {
               <button className="btn" onClick={() => scrollToSection('download')}>
                 Download Now
               </button>
-              <button className="btn btn-secondary" onClick={() => scrollToSection('demo')}>
+              <button className="btn btn-secondary" onClick={() => scrollToSection('video-demo')}>
                 Watch Demo
               </button>
             </div>

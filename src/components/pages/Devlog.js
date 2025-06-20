@@ -1,5 +1,5 @@
 import React from 'react';
-import './Devlog.css';
+import '../styling/Devlog.css';
 
 const Devlog = () => {
   const devlogEntries = [

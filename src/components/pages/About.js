@@ -1,6 +1,6 @@
 import React from 'react';
 import Devlog from './Devlog';
-import './About.css';
+import '../styling/About.css';
 
 const About = () => {
   return (
