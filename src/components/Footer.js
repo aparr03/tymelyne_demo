@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const location = useLocation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -27,10 +37,20 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Product</h4>
             <ul className="footer-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#screenshots">Screenshots</a></li>
-              <li><a href="#demo">Demo</a></li>
-              <li><a href="#download">Download</a></li>
+              {location.pathname === '/' ? (
+                <>
+                  <li><a href="#features" onClick={() => scrollToSection('features')}>Features</a></li>
+                  <li><a href="#demo" onClick={() => scrollToSection('demo')}>Demo</a></li>
+                  <li><a href="#download" onClick={() => scrollToSection('download')}>Download</a></li>
+                </>
+              ) : (
+                <>
+                  <li><Link to="/">Features</Link></li>
+                  <li><Link to="/">Demo</Link></li>
+                  <li><Link to="/">Download</Link></li>
+                </>
+              )}
+              <li><Link to="/about">Dev Blog</Link></li>
             </ul>
           </div>
           
@@ -47,8 +67,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Company</h4>
             <ul className="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/about">Blog</Link></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Press</a></li>
             </ul>
@@ -57,7 +77,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="footer-info">
-            <p>&copy; 2025 <a href="https://marcdejesusdev.com">Marc De Jesus</a> and <a href="https://parrportfolio.vercel.app">Andrew Parr</a>. All rights reserved.</p>
+            <p>&copy; 2025 <a></a>Marc De Jesus and Andrew Parr. All rights reserved.</p>
           </div>
           <button className="back-to-top" onClick={scrollToTop}>
             ↑ Back to Top

@@ -4,7 +4,6 @@
   "description": "Demo website for TymeLyne mobile app",
   "main": "index.js",
   "homepage": "https://aparr03.github.io/tymelyne_demo",
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -16,6 +15,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.2",
     "react-scripts": "5.0.1"
   },
   "browserslist": {

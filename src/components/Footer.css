@@ -42,8 +42,10 @@
   margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links a:visited {
   color: #bdc3c7;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 

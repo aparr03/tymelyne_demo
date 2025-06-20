@@ -45,7 +45,8 @@
   padding: 0;
 }
 
-.nav-list button {
+.nav-list button,
+.nav-list a {
   background: none;
   border: none;
   color: #2c3e50;
@@ -54,10 +55,17 @@
   transition: color 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-.nav-list button:hover {
+.nav-list button:hover,
+.nav-list a:hover {
   color: #667eea;
+}
+
+.nav-list a.active {
+  color: #667eea;
+  font-weight: 600;
 }
 
 .mobile-menu-btn {

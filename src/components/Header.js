@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,6 +18,10 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -26,9 +32,19 @@ const Header = () => {
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
-              <li><button onClick={() => scrollToSection('features')}>Features</button></li>
-              <li><button onClick={() => scrollToSection('demo')}>Demo</button></li>
-              <li><button onClick={() => scrollToSection('download')}>Download</button></li>
+              <li>
+                <Link to="/" onClick={handleNavClick}>Home</Link>
+              </li>
+              {location.pathname === '/' && (
+                <>
+                  <li><button onClick={() => scrollToSection('features')}>Features</button></li>
+                  <li><button onClick={() => scrollToSection('demo')}>Demo</button></li>
+                  <li><button onClick={() => scrollToSection('download')}>Download</button></li>
+                </>
+              )}
+              <li>
+                <Link to="/about" onClick={handleNavClick}>About</Link>
+              </li>
             </ul>
           </nav>
           
